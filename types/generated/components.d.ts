@@ -1,5 +1,45 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface NavigationDropdowns extends Struct.ComponentSchema {
+  collectionName: 'components_navigation_dropdowns';
+  info: {
+    displayName: 'dropdowns';
+  };
+  attributes: {
+    desc: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    subDropdowns: Schema.Attribute.Component<'navigation.sub-dropdowns', true>;
+    svg: Schema.Attribute.Text;
+  };
+}
+
+export interface NavigationLinks extends Struct.ComponentSchema {
+  collectionName: 'components_navigation_links';
+  info: {
+    displayName: 'Links';
+  };
+  attributes: {
+    dropdowns: Schema.Attribute.Component<'navigation.dropdowns', true>;
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<['multi', 'simple', 'single', 'link']>;
+  };
+}
+
+export interface NavigationSubDropdowns extends Struct.ComponentSchema {
+  collectionName: 'components_navigation_sub_dropdowns';
+  info: {
+    displayName: 'subDropdowns';
+  };
+  attributes: {
+    desc: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    svg: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -65,6 +105,9 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'navigation.dropdowns': NavigationDropdowns;
+      'navigation.links': NavigationLinks;
+      'navigation.sub-dropdowns': NavigationSubDropdowns;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

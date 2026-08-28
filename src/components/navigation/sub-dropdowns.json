@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_navigation_sub_dropdowns",
+  "info": {
+    "displayName": "subDropdowns"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "svg": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

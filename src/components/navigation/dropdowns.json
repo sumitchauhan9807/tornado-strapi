@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_navigation_dropdowns",
+  "info": {
+    "displayName": "dropdowns"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    },
+    "svg": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    },
+    "subDropdowns": {
+      "type": "component",
+      "component": "navigation.sub-dropdowns",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
