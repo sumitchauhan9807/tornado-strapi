@@ -1,5 +1,105 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface FooterCompanyInformation extends Struct.ComponentSchema {
+  collectionName: 'components_footer_company_informations';
+  info: {
+    displayName: 'Company Information';
+  };
+  attributes: {
+    countriesSection: Schema.Attribute.Component<
+      'footer.countries-section',
+      false
+    >;
+    main: Schema.Attribute.Component<'footer.main', false>;
+  };
+}
+
+export interface FooterCountries extends Struct.ComponentSchema {
+  collectionName: 'components_footer_countries';
+  info: {
+    displayName: 'Countries';
+  };
+  attributes: {
+    flag: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Schema.Attribute.String;
+    number: Schema.Attribute.String;
+  };
+}
+
+export interface FooterCountriesSection extends Struct.ComponentSchema {
+  collectionName: 'components_footer_countries_sections';
+  info: {
+    displayName: 'Countries Section';
+  };
+  attributes: {
+    countries: Schema.Attribute.Component<'footer.countries', true>;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface FooterFooterBottom extends Struct.ComponentSchema {
+  collectionName: 'components_footer_footer_bottoms';
+  info: {
+    displayName: 'Footer Bottom';
+  };
+  attributes: {
+    Copyright: Schema.Attribute.String;
+    socialMedia: Schema.Attribute.Component<'footer.social-media', true>;
+  };
+}
+
+export interface FooterLinks extends Struct.ComponentSchema {
+  collectionName: 'components_footer_links';
+  info: {
+    displayName: 'links';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+  };
+}
+
+export interface FooterMain extends Struct.ComponentSchema {
+  collectionName: 'components_footer_mains';
+  info: {
+    displayName: 'main';
+  };
+  attributes: {
+    address: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface FooterSocialMedia extends Struct.ComponentSchema {
+  collectionName: 'components_footer_social_medias';
+  info: {
+    displayName: 'Social Media';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+  };
+}
+
+export interface FooterSubFooter extends Struct.ComponentSchema {
+  collectionName: 'components_footer_sub_footers';
+  info: {
+    displayName: 'Sub Footer';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    links: Schema.Attribute.Component<'footer.links', true>;
+  };
+}
+
+export interface FooterSubcoun extends Struct.ComponentSchema {
+  collectionName: 'components_footer_subcouns';
+  info: {
+    displayName: 'subcoun';
+  };
+  attributes: {};
+}
+
 export interface NavigationDropdowns extends Struct.ComponentSchema {
   collectionName: 'components_navigation_dropdowns';
   info: {
@@ -105,6 +205,15 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'footer.company-information': FooterCompanyInformation;
+      'footer.countries': FooterCountries;
+      'footer.countries-section': FooterCountriesSection;
+      'footer.footer-bottom': FooterFooterBottom;
+      'footer.links': FooterLinks;
+      'footer.main': FooterMain;
+      'footer.social-media': FooterSocialMedia;
+      'footer.sub-footer': FooterSubFooter;
+      'footer.subcoun': FooterSubcoun;
       'navigation.dropdowns': NavigationDropdowns;
       'navigation.links': NavigationLinks;
       'navigation.sub-dropdowns': NavigationSubDropdowns;

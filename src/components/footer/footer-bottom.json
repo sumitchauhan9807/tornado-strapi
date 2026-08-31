@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_footer_footer_bottoms",
+  "info": {
+    "displayName": "Footer Bottom"
+  },
+  "options": {},
+  "attributes": {
+    "Copyright": {
+      "type": "string"
+    },
+    "socialMedia": {
+      "type": "component",
+      "component": "footer.social-media",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

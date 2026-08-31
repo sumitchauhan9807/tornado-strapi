@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_footer_mains",
+  "info": {
+    "displayName": "main"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "address": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

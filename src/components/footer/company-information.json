@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_footer_company_informations",
+  "info": {
+    "displayName": "Company Information"
+  },
+  "options": {},
+  "attributes": {
+    "main": {
+      "type": "component",
+      "component": "footer.main",
+      "repeatable": false
+    },
+    "countriesSection": {
+      "type": "component",
+      "component": "footer.countries-section",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

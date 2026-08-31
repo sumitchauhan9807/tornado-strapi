@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_footer_countries_sections",
+  "info": {
+    "displayName": "Countries Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "countries": {
+      "type": "component",
+      "component": "footer.countries",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

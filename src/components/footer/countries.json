@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_footer_countries",
+  "info": {
+    "displayName": "Countries"
+  },
+  "options": {},
+  "attributes": {
+    "flag": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
