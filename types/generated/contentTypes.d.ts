@@ -601,7 +601,7 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
       'api::footer.footer'
     > &
       Schema.Attribute.Private;
-    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    logo: Schema.Attribute.Component<'common.logo', false>;
     publishedAt: Schema.Attribute.DateTime;
     subFooter: Schema.Attribute.Component<'footer.sub-footer', true>;
     updatedAt: Schema.Attribute.DateTime;
@@ -663,6 +663,8 @@ export interface ApiNavigationNavigation extends Struct.SingleTypeSchema {
       'api::navigation.navigation'
     > &
       Schema.Attribute.Private;
+    logo: Schema.Attribute.Component<'common.logo', false>;
+    preHeader: Schema.Attribute.Component<'navigation.pre-header', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

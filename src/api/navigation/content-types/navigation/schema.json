@@ -15,6 +15,16 @@
       "type": "component",
       "component": "navigation.links",
       "repeatable": true
+    },
+    "logo": {
+      "type": "component",
+      "component": "common.logo",
+      "repeatable": false
+    },
+    "preHeader": {
+      "type": "component",
+      "component": "navigation.pre-header",
+      "repeatable": false
     }
   }
 }

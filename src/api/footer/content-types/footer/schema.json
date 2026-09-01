@@ -11,16 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "logo": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "subFooter": {
       "type": "component",
       "component": "footer.sub-footer",
@@ -34,6 +24,11 @@
     "footerBottom": {
       "type": "component",
       "component": "footer.footer-bottom",
+      "repeatable": false
+    },
+    "logo": {
+      "type": "component",
+      "component": "common.logo",
       "repeatable": false
     }
   }

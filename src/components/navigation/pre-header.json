@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_navigation_pre_headers",
+  "info": {
+    "displayName": "Pre Header"
+  },
+  "options": {},
+  "attributes": {
+    "Phonenumber": {
+      "type": "string"
+    },
+    "leftText1": {
+      "type": "string"
+    },
+    "leftText2": {
+      "type": "string"
+    },
+    "leftText3": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

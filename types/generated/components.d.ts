@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface CommonLogo extends Struct.ComponentSchema {
+  collectionName: 'components_common_logos';
+  info: {
+    displayName: 'Logo';
+  };
+  attributes: {
+    height: Schema.Attribute.Integer;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    width: Schema.Attribute.Integer;
+  };
+}
+
 export interface FooterCompanyInformation extends Struct.ComponentSchema {
   collectionName: 'components_footer_company_informations';
   info: {
@@ -127,6 +139,19 @@ export interface NavigationLinks extends Struct.ComponentSchema {
   };
 }
 
+export interface NavigationPreHeader extends Struct.ComponentSchema {
+  collectionName: 'components_navigation_pre_headers';
+  info: {
+    displayName: 'Pre Header';
+  };
+  attributes: {
+    leftText1: Schema.Attribute.String;
+    leftText2: Schema.Attribute.String;
+    leftText3: Schema.Attribute.String;
+    Phonenumber: Schema.Attribute.String;
+  };
+}
+
 export interface NavigationSubDropdowns extends Struct.ComponentSchema {
   collectionName: 'components_navigation_sub_dropdowns';
   info: {
@@ -205,6 +230,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'common.logo': CommonLogo;
       'footer.company-information': FooterCompanyInformation;
       'footer.countries': FooterCountries;
       'footer.countries-section': FooterCountriesSection;
@@ -216,6 +242,7 @@ declare module '@strapi/strapi' {
       'footer.subcoun': FooterSubcoun;
       'navigation.dropdowns': NavigationDropdowns;
       'navigation.links': NavigationLinks;
+      'navigation.pre-header': NavigationPreHeader;
       'navigation.sub-dropdowns': NavigationSubDropdowns;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
