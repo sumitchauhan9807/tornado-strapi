@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "animations",
+  "info": {
+    "singularName": "animation",
+    "pluralName": "animations",
+    "displayName": "Animations"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "hero-animation-components.type1",
+        "hero-animation-components.animation-type2"
+      ]
+    }
+  }
+}

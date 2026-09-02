@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_hero_hero_buttons",
+  "info": {
+    "displayName": "Hero Buttons"
+  },
+  "options": {},
+  "attributes": {
+    "button": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

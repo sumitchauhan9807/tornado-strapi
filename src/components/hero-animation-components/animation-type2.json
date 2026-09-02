@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_hero_animation_components_animation_type2s",
+  "info": {
+    "displayName": "AnimationType2"
+  },
+  "options": {},
+  "attributes": {
+    "boxText1": {
+      "type": "string"
+    },
+    "boxText2": {
+      "type": "string"
+    },
+    "boxText3": {
+      "type": "string"
+    },
+    "boxText4": {
+      "type": "string"
+    },
+    "topLeft": {
+      "type": "string"
+    },
+    "topRight": {
+      "type": "string"
+    },
+    "bottomLeft": {
+      "type": "string"
+    },
+    "bottomRight": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

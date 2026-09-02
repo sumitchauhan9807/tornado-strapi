@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_hero_hero1s",
+  "info": {
+    "displayName": "Hero1"
+  },
+  "options": {},
+  "attributes": {
+    "topHeading": {
+      "type": "string"
+    },
+    "fancyHeading": {
+      "type": "component",
+      "component": "hero.fancy-heading",
+      "repeatable": true
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "heroButtons": {
+      "type": "component",
+      "component": "hero.hero-buttons",
+      "repeatable": true
+    },
+    "bottomLists": {
+      "type": "component",
+      "component": "common.simple-lists",
+      "repeatable": true
+    },
+    "animation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::animation.animation"
+    }
+  },
+  "config": {}
+}

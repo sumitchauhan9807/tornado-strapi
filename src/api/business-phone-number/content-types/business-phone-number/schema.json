@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "business_phone_numbers",
+  "info": {
+    "singularName": "business-phone-number",
+    "pluralName": "business-phone-numbers",
+    "displayName": "Business Phone Numbers"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "hero.hero1"
+      ]
+    }
+  }
+}

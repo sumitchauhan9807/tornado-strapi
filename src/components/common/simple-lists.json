@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_common_simple_lists",
+  "info": {
+    "displayName": "Simple Lists"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

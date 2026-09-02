@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_hero_animation_components_staus_values",
+  "info": {
+    "displayName": "Staus Values"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

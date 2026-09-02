@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface CommonButton extends Struct.ComponentSchema {
+  collectionName: 'components_common_buttons';
+  info: {
+    displayName: 'Button';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface CommonLogo extends Struct.ComponentSchema {
   collectionName: 'components_common_logos';
   info: {
@@ -9,6 +20,16 @@ export interface CommonLogo extends Struct.ComponentSchema {
     height: Schema.Attribute.Integer;
     logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     width: Schema.Attribute.Integer;
+  };
+}
+
+export interface CommonSimpleLists extends Struct.ComponentSchema {
+  collectionName: 'components_common_simple_lists';
+  info: {
+    displayName: 'Simple Lists';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
   };
 }
 
@@ -110,6 +131,137 @@ export interface FooterSubcoun extends Struct.ComponentSchema {
     displayName: 'subcoun';
   };
   attributes: {};
+}
+
+export interface HeroAnimationComponentsAnimation
+  extends Struct.ComponentSchema {
+  collectionName: 'components_hero_animation_components_animations';
+  info: {
+    displayName: 'animation';
+  };
+  attributes: {};
+}
+
+export interface HeroAnimationComponentsAnimationType2
+  extends Struct.ComponentSchema {
+  collectionName: 'components_hero_animation_components_animation_type2s';
+  info: {
+    displayName: 'AnimationType2';
+  };
+  attributes: {
+    bottomLeft: Schema.Attribute.String;
+    bottomRight: Schema.Attribute.String;
+    boxText1: Schema.Attribute.String;
+    boxText2: Schema.Attribute.String;
+    boxText3: Schema.Attribute.String;
+    boxText4: Schema.Attribute.String;
+    topLeft: Schema.Attribute.String;
+    topRight: Schema.Attribute.String;
+  };
+}
+
+export interface HeroAnimationComponentsNetworkData
+  extends Struct.ComponentSchema {
+  collectionName: 'components_hero_animation_components_network_data';
+  info: {
+    displayName: 'Network Data';
+  };
+  attributes: {};
+}
+
+export interface HeroAnimationComponentsRoutes extends Struct.ComponentSchema {
+  collectionName: 'components_hero_animation_components_routes';
+  info: {
+    displayName: 'Routes';
+  };
+  attributes: {
+    code: Schema.Attribute.String;
+    rate: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+    time: Schema.Attribute.String;
+  };
+}
+
+export interface HeroAnimationComponentsStausValues
+  extends Struct.ComponentSchema {
+  collectionName: 'components_hero_animation_components_staus_values';
+  info: {
+    displayName: 'Staus Values';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface HeroAnimationComponentsType1 extends Struct.ComponentSchema {
+  collectionName: 'components_hero_animation_components_type1s';
+  info: {
+    displayName: 'AnimationType1';
+  };
+  attributes: {
+    bottomLeftText: Schema.Attribute.String;
+    bottomRightText: Schema.Attribute.String;
+    button1Text: Schema.Attribute.String;
+    button2Text: Schema.Attribute.String;
+    routes: Schema.Attribute.Component<
+      'hero-animation-components.routes',
+      true
+    >;
+    statusValues: Schema.Attribute.Component<
+      'hero-animation-components.staus-values',
+      true
+    >;
+    svg: Schema.Attribute.Text;
+    topHeading: Schema.Attribute.String;
+  };
+}
+
+export interface HeroFancyHeading extends Struct.ComponentSchema {
+  collectionName: 'components_hero_fancy_headings';
+  info: {
+    displayName: 'Fancy Heading';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+    type: Schema.Attribute.Enumeration<['simple', 'fancy']>;
+  };
+}
+
+export interface HeroFancyHeadingText extends Struct.ComponentSchema {
+  collectionName: 'components_hero_fancy_heading_texts';
+  info: {
+    displayName: 'fancyHeading Text';
+  };
+  attributes: {};
+}
+
+export interface HeroHeroButtons extends Struct.ComponentSchema {
+  collectionName: 'components_hero_hero_buttons';
+  info: {
+    displayName: 'Hero Buttons';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'common.button', false>;
+  };
+}
+
+export interface HeroHero1 extends Struct.ComponentSchema {
+  collectionName: 'components_hero_hero1s';
+  info: {
+    displayName: 'Hero1';
+  };
+  attributes: {
+    animation: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::animation.animation'
+    >;
+    bottomLists: Schema.Attribute.Component<'common.simple-lists', true>;
+    content: Schema.Attribute.Blocks;
+    fancyHeading: Schema.Attribute.Component<'hero.fancy-heading', true>;
+    heroButtons: Schema.Attribute.Component<'hero.hero-buttons', true>;
+    topHeading: Schema.Attribute.String;
+  };
 }
 
 export interface NavigationDropdowns extends Struct.ComponentSchema {
@@ -230,7 +382,9 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'common.button': CommonButton;
       'common.logo': CommonLogo;
+      'common.simple-lists': CommonSimpleLists;
       'footer.company-information': FooterCompanyInformation;
       'footer.countries': FooterCountries;
       'footer.countries-section': FooterCountriesSection;
@@ -240,6 +394,16 @@ declare module '@strapi/strapi' {
       'footer.social-media': FooterSocialMedia;
       'footer.sub-footer': FooterSubFooter;
       'footer.subcoun': FooterSubcoun;
+      'hero-animation-components.animation': HeroAnimationComponentsAnimation;
+      'hero-animation-components.animation-type2': HeroAnimationComponentsAnimationType2;
+      'hero-animation-components.network-data': HeroAnimationComponentsNetworkData;
+      'hero-animation-components.routes': HeroAnimationComponentsRoutes;
+      'hero-animation-components.staus-values': HeroAnimationComponentsStausValues;
+      'hero-animation-components.type1': HeroAnimationComponentsType1;
+      'hero.fancy-heading': HeroFancyHeading;
+      'hero.fancy-heading-text': HeroFancyHeadingText;
+      'hero.hero-buttons': HeroHeroButtons;
+      'hero.hero1': HeroHero1;
       'navigation.dropdowns': NavigationDropdowns;
       'navigation.links': NavigationLinks;
       'navigation.pre-header': NavigationPreHeader;

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_hero_animation_components_type1s",
+  "info": {
+    "displayName": "AnimationType1"
+  },
+  "options": {},
+  "attributes": {
+    "topHeading": {
+      "type": "string"
+    },
+    "button1Text": {
+      "type": "string"
+    },
+    "button2Text": {
+      "type": "string"
+    },
+    "svg": {
+      "type": "text"
+    },
+    "bottomLeftText": {
+      "type": "string"
+    },
+    "bottomRightText": {
+      "type": "string"
+    },
+    "routes": {
+      "type": "component",
+      "component": "hero-animation-components.routes",
+      "repeatable": true
+    },
+    "statusValues": {
+      "type": "component",
+      "component": "hero-animation-components.staus-values",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

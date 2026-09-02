@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_hero_animation_components_routes",
+  "info": {
+    "displayName": "Routes"
+  },
+  "options": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "rate": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
