@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_common_service_descriptions",
+  "info": {
+    "displayName": "Description Lists"
+  },
+  "options": {},
+  "attributes": {
+    "svg": {
+      "type": "text"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "tags_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

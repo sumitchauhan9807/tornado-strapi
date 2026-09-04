@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_home_cta_3s",
+  "info": {
+    "displayName": "CTA3"
+  },
+  "options": {},
+  "attributes": {
+    "blockHeading": {
+      "type": "component",
+      "component": "common.block-heading",
+      "repeatable": false
+    },
+    "buttons": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

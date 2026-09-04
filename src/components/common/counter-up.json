@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_common_counter_ups",
+  "info": {
+    "displayName": "Counter Up"
+  },
+  "options": {},
+  "attributes": {
+    "counterItem": {
+      "type": "component",
+      "component": "common.counter-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

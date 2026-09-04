@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_common_services_lists_1s",
+  "info": {
+    "displayName": "Description Info"
+  },
+  "options": {},
+  "attributes": {
+    "blockHeading": {
+      "type": "component",
+      "component": "common.block-heading",
+      "repeatable": false
+    },
+    "descriptionLists": {
+      "type": "component",
+      "component": "common.service-description",
+      "repeatable": true
+    },
+    "layoutType": {
+      "type": "enumeration",
+      "enum": [
+        "svg_with_tags",
+        "svg_basic_1",
+        "svg_basic_2",
+        "numbered",
+        "heading_only",
+        "grid_lists",
+        "black_background"
+      ]
+    }
+  },
+  "config": {}
+}

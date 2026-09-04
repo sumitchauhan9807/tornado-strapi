@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_home_faq_lists",
+  "info": {
+    "displayName": "ctaLists"
+  },
+  "options": {},
+  "attributes": {
+    "blockHeading": {
+      "type": "component",
+      "component": "common.block-heading",
+      "repeatable": false
+    },
+    "lists": {
+      "type": "component",
+      "component": "common.simple-lists",
+      "repeatable": true
+    },
+    "buttons": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "dark"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -716,7 +716,15 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    content: Schema.Attribute.DynamicZone<['hero.hero1']>;
+    content: Schema.Attribute.DynamicZone<
+      [
+        'hero.hero1',
+        'home.faq',
+        'common.services-lists-1',
+        'home.cta-2',
+        'home.cta-3',
+      ]
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

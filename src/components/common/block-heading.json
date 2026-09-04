@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_common_block_headings",
+  "info": {
+    "displayName": "Block Heading"
+  },
+  "options": {},
+  "attributes": {
+    "SubHeading": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

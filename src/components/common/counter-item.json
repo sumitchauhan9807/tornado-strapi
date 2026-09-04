@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_common_counter_items",
+  "info": {
+    "displayName": "Counter Item"
+  },
+  "options": {},
+  "attributes": {
+    "countValue": {
+      "type": "decimal"
+    },
+    "afterCountText": {
+      "type": "string"
+    },
+    "beforeCountText": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "subText": {
+      "type": "string"
+    },
+    "countTextColored": {
+      "type": "enumeration",
+      "enum": [
+        "yes",
+        "no"
+      ]
+    }
+  },
+  "config": {}
+}

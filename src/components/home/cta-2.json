@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_home_cta_2s",
+  "info": {
+    "displayName": "CTA2"
+  },
+  "options": {},
+  "attributes": {
+    "blockHeading": {
+      "type": "component",
+      "component": "common.block-heading",
+      "repeatable": false
+    },
+    "cta2Left": {
+      "type": "component",
+      "component": "home.cta-2-left",
+      "repeatable": false
+    },
+    "cta2Lists": {
+      "type": "component",
+      "component": "home.cta2-right",
+      "repeatable": true
+    },
+    "counterUp": {
+      "type": "component",
+      "component": "common.counter-up",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

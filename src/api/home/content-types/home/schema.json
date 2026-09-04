@@ -14,7 +14,11 @@
     "content": {
       "type": "dynamiczone",
       "components": [
-        "hero.hero1"
+        "hero.hero1",
+        "home.faq",
+        "common.services-lists-1",
+        "home.cta-2",
+        "home.cta-3"
       ]
     }
   }

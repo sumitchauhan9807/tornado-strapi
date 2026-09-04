@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface CommonBlockHeading extends Struct.ComponentSchema {
+  collectionName: 'components_common_block_headings';
+  info: {
+    displayName: 'Block Heading';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    SubHeading: Schema.Attribute.String;
+  };
+}
+
 export interface CommonButton extends Struct.ComponentSchema {
   collectionName: 'components_common_buttons';
   info: {
@@ -8,6 +20,31 @@ export interface CommonButton extends Struct.ComponentSchema {
   attributes: {
     link: Schema.Attribute.String;
     text: Schema.Attribute.String;
+  };
+}
+
+export interface CommonCounterItem extends Struct.ComponentSchema {
+  collectionName: 'components_common_counter_items';
+  info: {
+    displayName: 'Counter Item';
+  };
+  attributes: {
+    afterCountText: Schema.Attribute.String;
+    beforeCountText: Schema.Attribute.String;
+    countTextColored: Schema.Attribute.Enumeration<['yes', 'no']>;
+    countValue: Schema.Attribute.Decimal;
+    heading: Schema.Attribute.String;
+    subText: Schema.Attribute.String;
+  };
+}
+
+export interface CommonCounterUp extends Struct.ComponentSchema {
+  collectionName: 'components_common_counter_ups';
+  info: {
+    displayName: 'Counter Up';
+  };
+  attributes: {
+    counterItem: Schema.Attribute.Component<'common.counter-item', true>;
   };
 }
 
@@ -20,6 +57,44 @@ export interface CommonLogo extends Struct.ComponentSchema {
     height: Schema.Attribute.Integer;
     logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     width: Schema.Attribute.Integer;
+  };
+}
+
+export interface CommonServiceDescription extends Struct.ComponentSchema {
+  collectionName: 'components_common_service_descriptions';
+  info: {
+    displayName: 'Description Lists';
+  };
+  attributes: {
+    content: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    svg: Schema.Attribute.Text;
+    tags_link: Schema.Attribute.String;
+  };
+}
+
+export interface CommonServicesLists1 extends Struct.ComponentSchema {
+  collectionName: 'components_common_services_lists_1s';
+  info: {
+    displayName: 'Description Info';
+  };
+  attributes: {
+    blockHeading: Schema.Attribute.Component<'common.block-heading', false>;
+    descriptionLists: Schema.Attribute.Component<
+      'common.service-description',
+      true
+    >;
+    layoutType: Schema.Attribute.Enumeration<
+      [
+        'svg_with_tags',
+        'svg_basic_1',
+        'svg_basic_2',
+        'numbered',
+        'heading_only',
+        'grid_lists',
+        'black_background',
+      ]
+    >;
   };
 }
 
@@ -264,6 +339,77 @@ export interface HeroHero1 extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeCta2 extends Struct.ComponentSchema {
+  collectionName: 'components_home_cta_2s';
+  info: {
+    displayName: 'CTA2';
+  };
+  attributes: {
+    blockHeading: Schema.Attribute.Component<'common.block-heading', false>;
+    counterUp: Schema.Attribute.Component<'common.counter-up', false>;
+    cta2Left: Schema.Attribute.Component<'home.cta-2-left', false>;
+    cta2Lists: Schema.Attribute.Component<'home.cta2-right', true>;
+  };
+}
+
+export interface HomeCta2Left extends Struct.ComponentSchema {
+  collectionName: 'components_home_cta_2_lefts';
+  info: {
+    displayName: 'CTA2Left';
+  };
+  attributes: {
+    blockHeading: Schema.Attribute.Component<'common.block-heading', false>;
+    lists: Schema.Attribute.Component<'common.simple-lists', true>;
+  };
+}
+
+export interface HomeCta3 extends Struct.ComponentSchema {
+  collectionName: 'components_home_cta_3s';
+  info: {
+    displayName: 'CTA3';
+  };
+  attributes: {
+    blockHeading: Schema.Attribute.Component<'common.block-heading', false>;
+    buttons: Schema.Attribute.Component<'common.button', true>;
+  };
+}
+
+export interface HomeCta2Right extends Struct.ComponentSchema {
+  collectionName: 'components_home_cta2_rights';
+  info: {
+    displayName: 'cta2Right';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    SubHeading: Schema.Attribute.String;
+    svg: Schema.Attribute.Text;
+  };
+}
+
+export interface HomeFaq extends Struct.ComponentSchema {
+  collectionName: 'components_home_faqs';
+  info: {
+    displayName: 'CTA';
+  };
+  attributes: {
+    blockHeading: Schema.Attribute.Component<'common.block-heading', false>;
+    ctaLists: Schema.Attribute.Component<'home.faq-lists', true>;
+  };
+}
+
+export interface HomeFaqLists extends Struct.ComponentSchema {
+  collectionName: 'components_home_faq_lists';
+  info: {
+    displayName: 'ctaLists';
+  };
+  attributes: {
+    blockHeading: Schema.Attribute.Component<'common.block-heading', false>;
+    buttons: Schema.Attribute.Component<'common.button', true>;
+    lists: Schema.Attribute.Component<'common.simple-lists', true>;
+    type: Schema.Attribute.Enumeration<['light', 'dark']>;
+  };
+}
+
 export interface NavigationDropdowns extends Struct.ComponentSchema {
   collectionName: 'components_navigation_dropdowns';
   info: {
@@ -382,8 +528,13 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'common.block-heading': CommonBlockHeading;
       'common.button': CommonButton;
+      'common.counter-item': CommonCounterItem;
+      'common.counter-up': CommonCounterUp;
       'common.logo': CommonLogo;
+      'common.service-description': CommonServiceDescription;
+      'common.services-lists-1': CommonServicesLists1;
       'common.simple-lists': CommonSimpleLists;
       'footer.company-information': FooterCompanyInformation;
       'footer.countries': FooterCountries;
@@ -404,6 +555,12 @@ declare module '@strapi/strapi' {
       'hero.fancy-heading-text': HeroFancyHeadingText;
       'hero.hero-buttons': HeroHeroButtons;
       'hero.hero1': HeroHero1;
+      'home.cta-2': HomeCta2;
+      'home.cta-2-left': HomeCta2Left;
+      'home.cta-3': HomeCta3;
+      'home.cta2-right': HomeCta2Right;
+      'home.faq': HomeFaq;
+      'home.faq-lists': HomeFaqLists;
       'navigation.dropdowns': NavigationDropdowns;
       'navigation.links': NavigationLinks;
       'navigation.pre-header': NavigationPreHeader;
