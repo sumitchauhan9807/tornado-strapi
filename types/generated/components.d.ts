@@ -410,6 +410,17 @@ export interface HomeFaqLists extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeMarquee extends Struct.ComponentSchema {
+  collectionName: 'components_home_marquees';
+  info: {
+    displayName: 'Marquee';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    lists: Schema.Attribute.Component<'common.simple-lists', true>;
+  };
+}
+
 export interface NavigationDropdowns extends Struct.ComponentSchema {
   collectionName: 'components_navigation_dropdowns';
   info: {
@@ -561,6 +572,7 @@ declare module '@strapi/strapi' {
       'home.cta2-right': HomeCta2Right;
       'home.faq': HomeFaq;
       'home.faq-lists': HomeFaqLists;
+      'home.marquee': HomeMarquee;
       'navigation.dropdowns': NavigationDropdowns;
       'navigation.links': NavigationLinks;
       'navigation.pre-header': NavigationPreHeader;

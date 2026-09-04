@@ -723,6 +723,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         'common.services-lists-1',
         'home.cta-2',
         'home.cta-3',
+        'home.marquee',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
