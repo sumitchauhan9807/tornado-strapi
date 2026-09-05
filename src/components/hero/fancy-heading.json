@@ -12,7 +12,8 @@
       "type": "enumeration",
       "enum": [
         "simple",
-        "fancy"
+        "fancy",
+        "underlined"
       ]
     }
   },

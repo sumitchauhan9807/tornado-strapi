@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_common_description_lists_basics",
+  "info": {
+    "displayName": "Description Lists Basic"
+  },
+  "options": {},
+  "attributes": {
+    "blockHeading": {
+      "type": "component",
+      "component": "common.block-heading",
+      "repeatable": false
+    },
+    "lists": {
+      "type": "component",
+      "component": "common.simple-lists",
+      "repeatable": true
+    },
+    "layoutType": {
+      "type": "enumeration",
+      "enum": [
+        "BASIC",
+        "LISTS ON RIGHT"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -18,13 +18,20 @@
     "layoutType": {
       "type": "enumeration",
       "enum": [
-        "svg_with_tags",
-        "svg_basic_1",
-        "svg_basic_2",
-        "numbered",
-        "heading_only",
-        "grid_lists",
-        "black_background"
+        "SVG WITH TAGS",
+        "SVG ON TOP",
+        "SVG ON LEFT",
+        "NUMBERED LISTS",
+        "LISTS IN GRID",
+        "BLACK BACKGROUND",
+        "HEADING & CONTENT"
+      ]
+    },
+    "listsPerRow": {
+      "type": "enumeration",
+      "enum": [
+        "THREE",
+        "FOUR"
       ]
     }
   },

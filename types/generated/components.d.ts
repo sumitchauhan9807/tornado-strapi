@@ -48,6 +48,29 @@ export interface CommonCounterUp extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonDescriptionListsBasic extends Struct.ComponentSchema {
+  collectionName: 'components_common_description_lists_basics';
+  info: {
+    displayName: 'Description Lists Basic';
+  };
+  attributes: {
+    blockHeading: Schema.Attribute.Component<'common.block-heading', false>;
+    layoutType: Schema.Attribute.Enumeration<['BASIC', 'LISTS ON RIGHT']>;
+    lists: Schema.Attribute.Component<'common.simple-lists', true>;
+  };
+}
+
+export interface CommonFaq extends Struct.ComponentSchema {
+  collectionName: 'components_common_faqs';
+  info: {
+    displayName: 'FAQ';
+  };
+  attributes: {
+    blockHeading: Schema.Attribute.Component<'common.block-heading', false>;
+    qna: Schema.Attribute.Component<'common.qna', true>;
+  };
+}
+
 export interface CommonLogo extends Struct.ComponentSchema {
   collectionName: 'components_common_logos';
   info: {
@@ -57,6 +80,17 @@ export interface CommonLogo extends Struct.ComponentSchema {
     height: Schema.Attribute.Integer;
     logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     width: Schema.Attribute.Integer;
+  };
+}
+
+export interface CommonQna extends Struct.ComponentSchema {
+  collectionName: 'components_common_qnas';
+  info: {
+    displayName: 'qna';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.String;
   };
 }
 
@@ -86,15 +120,16 @@ export interface CommonServicesLists1 extends Struct.ComponentSchema {
     >;
     layoutType: Schema.Attribute.Enumeration<
       [
-        'svg_with_tags',
-        'svg_basic_1',
-        'svg_basic_2',
-        'numbered',
-        'heading_only',
-        'grid_lists',
-        'black_background',
+        'SVG WITH TAGS',
+        'SVG ON TOP',
+        'SVG ON LEFT',
+        'NUMBERED LISTS',
+        'LISTS IN GRID',
+        'BLACK BACKGROUND',
+        'HEADING & CONTENT',
       ]
     >;
+    listsPerRow: Schema.Attribute.Enumeration<['THREE', 'FOUR']>;
   };
 }
 
@@ -299,7 +334,7 @@ export interface HeroFancyHeading extends Struct.ComponentSchema {
   };
   attributes: {
     text: Schema.Attribute.Text;
-    type: Schema.Attribute.Enumeration<['simple', 'fancy']>;
+    type: Schema.Attribute.Enumeration<['simple', 'fancy', 'underlined']>;
   };
 }
 
@@ -543,7 +578,10 @@ declare module '@strapi/strapi' {
       'common.button': CommonButton;
       'common.counter-item': CommonCounterItem;
       'common.counter-up': CommonCounterUp;
+      'common.description-lists-basic': CommonDescriptionListsBasic;
+      'common.faq': CommonFaq;
       'common.logo': CommonLogo;
+      'common.qna': CommonQna;
       'common.service-description': CommonServiceDescription;
       'common.services-lists-1': CommonServicesLists1;
       'common.simple-lists': CommonSimpleLists;
