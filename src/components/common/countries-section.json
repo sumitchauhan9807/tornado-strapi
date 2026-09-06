@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_common_countries_sections",
+  "info": {
+    "displayName": "Countries Section"
+  },
+  "options": {},
+  "attributes": {
+    "blockHeading": {
+      "type": "component",
+      "component": "common.block-heading",
+      "repeatable": false
+    },
+    "subText": {
+      "type": "string"
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country.country"
+    }
+  },
+  "config": {}
+}

@@ -789,6 +789,8 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         'common.description-lists-basic',
         'common.counter-up',
         'common.faq',
+        'common.countries-section',
+        'common.contact-form',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

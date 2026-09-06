@@ -21,7 +21,9 @@
         "common.services-lists-1",
         "common.description-lists-basic",
         "common.counter-up",
-        "common.faq"
+        "common.faq",
+        "common.countries-section",
+        "common.contact-form"
       ]
     },
     "slug": {

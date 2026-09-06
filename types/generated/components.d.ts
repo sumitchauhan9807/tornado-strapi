@@ -23,6 +23,19 @@ export interface CommonButton extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonContactForm extends Struct.ComponentSchema {
+  collectionName: 'components_common_contact_forms';
+  info: {
+    displayName: 'Contact Form';
+  };
+  attributes: {
+    action: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    subText: Schema.Attribute.String;
+  };
+}
+
 export interface CommonCounterItem extends Struct.ComponentSchema {
   collectionName: 'components_common_counter_items';
   info: {
@@ -45,6 +58,18 @@ export interface CommonCounterUp extends Struct.ComponentSchema {
   };
   attributes: {
     counterItem: Schema.Attribute.Component<'common.counter-item', true>;
+  };
+}
+
+export interface CommonCountriesSection extends Struct.ComponentSchema {
+  collectionName: 'components_common_countries_sections';
+  info: {
+    displayName: 'Countries Section';
+  };
+  attributes: {
+    blockHeading: Schema.Attribute.Component<'common.block-heading', false>;
+    countries: Schema.Attribute.Relation<'oneToMany', 'api::country.country'>;
+    subText: Schema.Attribute.String;
   };
 }
 
@@ -576,8 +601,10 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'common.block-heading': CommonBlockHeading;
       'common.button': CommonButton;
+      'common.contact-form': CommonContactForm;
       'common.counter-item': CommonCounterItem;
       'common.counter-up': CommonCounterUp;
+      'common.countries-section': CommonCountriesSection;
       'common.description-lists-basic': CommonDescriptionListsBasic;
       'common.faq': CommonFaq;
       'common.logo': CommonLogo;
