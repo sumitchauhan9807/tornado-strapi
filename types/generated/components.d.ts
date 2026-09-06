@@ -23,6 +23,18 @@ export interface CommonButton extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonCities extends Struct.ComponentSchema {
+  collectionName: 'components_common_cities';
+  info: {
+    displayName: 'cities';
+  };
+  attributes: {
+    areaCodes: Schema.Attribute.Component<'common.simple-lists', true>;
+    name: Schema.Attribute.String;
+    region: Schema.Attribute.String;
+  };
+}
+
 export interface CommonContactForm extends Struct.ComponentSchema {
   collectionName: 'components_common_contact_forms';
   info: {
@@ -601,6 +613,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'common.block-heading': CommonBlockHeading;
       'common.button': CommonButton;
+      'common.cities': CommonCities;
       'common.contact-form': CommonContactForm;
       'common.counter-item': CommonCounterItem;
       'common.counter-up': CommonCounterUp;

@@ -622,6 +622,7 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
   };
   attributes: {
     callingCode: Schema.Attribute.String;
+    cities: Schema.Attribute.Component<'common.cities', true>;
     CountryCode: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

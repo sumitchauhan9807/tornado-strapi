@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_common_cities",
+  "info": {
+    "displayName": "cities"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "areaCodes": {
+      "type": "component",
+      "component": "common.simple-lists",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

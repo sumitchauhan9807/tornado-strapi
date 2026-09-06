@@ -32,6 +32,11 @@
     },
     "callingCode": {
       "type": "string"
+    },
+    "cities": {
+      "type": "component",
+      "component": "common.cities",
+      "repeatable": true
     }
   }
 }
