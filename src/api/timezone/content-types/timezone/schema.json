@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "timezones",
+  "info": {
+    "singularName": "timezone",
+    "pluralName": "timezones",
+    "displayName": "Timezone"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "clientNumber": {
+      "type": "string"
+    },
+    "schedule": {
+      "type": "json"
+    },
+    "defaultSchedule": {
+      "type": "component",
+      "component": "timezone.working-schedule",
+      "repeatable": false,
+      "required": true
+    }
+  }
+}

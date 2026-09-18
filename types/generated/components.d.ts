@@ -608,6 +608,47 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface TimezoneSchedule extends Struct.ComponentSchema {
+  collectionName: 'components_timezone_schedules';
+  info: {
+    displayName: 'schedule';
+  };
+  attributes: {
+    closeTime: Schema.Attribute.Time &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'20:30:00.000'>;
+    isWorking: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+    openTime: Schema.Attribute.Time &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'09:00:00.000'>;
+  };
+}
+
+export interface TimezoneWorkingSchedule extends Struct.ComponentSchema {
+  collectionName: 'components_timezone_working_schedules';
+  info: {
+    displayName: 'workingSchedule';
+  };
+  attributes: {
+    Friday: Schema.Attribute.Component<'timezone.schedule', false> &
+      Schema.Attribute.Required;
+    Monday: Schema.Attribute.Component<'timezone.schedule', false> &
+      Schema.Attribute.Required;
+    Saturday: Schema.Attribute.Component<'timezone.schedule', false> &
+      Schema.Attribute.Required;
+    Sunday: Schema.Attribute.Component<'timezone.schedule', false> &
+      Schema.Attribute.Required;
+    Thursday: Schema.Attribute.Component<'timezone.schedule', false> &
+      Schema.Attribute.Required;
+    Tuesday: Schema.Attribute.Component<'timezone.schedule', false> &
+      Schema.Attribute.Required;
+    Wednesday: Schema.Attribute.Component<'timezone.schedule', false> &
+      Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
@@ -660,6 +701,8 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'timezone.schedule': TimezoneSchedule;
+      'timezone.working-schedule': TimezoneWorkingSchedule;
     }
   }
 }

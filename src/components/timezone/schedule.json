@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_timezone_schedules",
+  "info": {
+    "displayName": "schedule"
+  },
+  "options": {},
+  "attributes": {
+    "openTime": {
+      "type": "time",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "isWorking"
+            },
+            false
+          ]
+        }
+      },
+      "required": true,
+      "default": "09:00:00.000"
+    },
+    "closeTime": {
+      "type": "time",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "isWorking"
+            },
+            false
+          ]
+        }
+      },
+      "required": true,
+      "default": "20:30:00.000"
+    },
+    "isWorking": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "config": {}
+}
