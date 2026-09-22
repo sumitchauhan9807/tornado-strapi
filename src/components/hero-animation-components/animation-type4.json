@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_hero_animation_components_animation_type4s",
+  "info": {
+    "displayName": "AnimationType4"
+  },
+  "options": {},
+  "attributes": {
+    "OrbitalItems": {
+      "type": "component",
+      "component": "hero-animation-components.orbital-items",
+      "repeatable": true,
+      "max": 4
+    },
+    "svg": {
+      "type": "text"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "bottomText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

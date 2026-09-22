@@ -18,7 +18,9 @@
       "type": "dynamiczone",
       "components": [
         "hero-animation-components.type1",
-        "hero-animation-components.animation-type2"
+        "hero-animation-components.animation-type2",
+        "hero-animation-components.animation-type3",
+        "hero-animation-components.animation-type4"
       ]
     }
   }

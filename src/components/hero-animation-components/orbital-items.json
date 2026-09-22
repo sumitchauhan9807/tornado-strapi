@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_hero_animation_components_orbital_items",
+  "info": {
+    "displayName": "OrbitalItems"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "svg": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

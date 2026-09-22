@@ -307,6 +307,75 @@ export interface HeroAnimationComponentsAnimationType2
   };
 }
 
+export interface HeroAnimationComponentsAnimationType3
+  extends Struct.ComponentSchema {
+  collectionName: 'components_hero_animation_components_animation_type3s';
+  info: {
+    displayName: 'AnimationType3';
+  };
+  attributes: {
+    bottomItems: Schema.Attribute.Component<
+      'hero-animation-components.bottom-items',
+      true
+    > &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 3;
+        },
+        number
+      >;
+    heading: Schema.Attribute.String;
+    OrbitalItems: Schema.Attribute.Component<
+      'hero-animation-components.orbital-items',
+      true
+    > &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 6;
+        },
+        number
+      >;
+    SubHeading: Schema.Attribute.String;
+    svg: Schema.Attribute.Text;
+  };
+}
+
+export interface HeroAnimationComponentsAnimationType4
+  extends Struct.ComponentSchema {
+  collectionName: 'components_hero_animation_components_animation_type4s';
+  info: {
+    displayName: 'AnimationType4';
+  };
+  attributes: {
+    bottomText: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    OrbitalItems: Schema.Attribute.Component<
+      'hero-animation-components.orbital-items',
+      true
+    > &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 4;
+        },
+        number
+      >;
+    subHeading: Schema.Attribute.String;
+    svg: Schema.Attribute.Text;
+  };
+}
+
+export interface HeroAnimationComponentsBottomItems
+  extends Struct.ComponentSchema {
+  collectionName: 'components_hero_animation_components_bottom_items';
+  info: {
+    displayName: 'bottomItems';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
 export interface HeroAnimationComponentsNetworkData
   extends Struct.ComponentSchema {
   collectionName: 'components_hero_animation_components_network_data';
@@ -314,6 +383,18 @@ export interface HeroAnimationComponentsNetworkData
     displayName: 'Network Data';
   };
   attributes: {};
+}
+
+export interface HeroAnimationComponentsOrbitalItems
+  extends Struct.ComponentSchema {
+  collectionName: 'components_hero_animation_components_orbital_items';
+  info: {
+    displayName: 'OrbitalItems';
+  };
+  attributes: {
+    svg: Schema.Attribute.Text;
+    text: Schema.Attribute.String;
+  };
 }
 
 export interface HeroAnimationComponentsRoutes extends Struct.ComponentSchema {
@@ -677,7 +758,11 @@ declare module '@strapi/strapi' {
       'footer.subcoun': FooterSubcoun;
       'hero-animation-components.animation': HeroAnimationComponentsAnimation;
       'hero-animation-components.animation-type2': HeroAnimationComponentsAnimationType2;
+      'hero-animation-components.animation-type3': HeroAnimationComponentsAnimationType3;
+      'hero-animation-components.animation-type4': HeroAnimationComponentsAnimationType4;
+      'hero-animation-components.bottom-items': HeroAnimationComponentsBottomItems;
       'hero-animation-components.network-data': HeroAnimationComponentsNetworkData;
+      'hero-animation-components.orbital-items': HeroAnimationComponentsOrbitalItems;
       'hero-animation-components.routes': HeroAnimationComponentsRoutes;
       'hero-animation-components.staus-values': HeroAnimationComponentsStausValues;
       'hero-animation-components.type1': HeroAnimationComponentsType1;

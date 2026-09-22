@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_hero_animation_components_bottom_items",
+  "info": {
+    "displayName": "bottomItems"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
