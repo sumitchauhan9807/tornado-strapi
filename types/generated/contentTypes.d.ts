@@ -489,6 +489,8 @@ export interface ApiAnimationAnimation extends Struct.CollectionTypeSchema {
         'hero-animation-components.animation-type2',
         'hero-animation-components.animation-type3',
         'hero-animation-components.animation-type4',
+        'hero-animation-components.animation-type5',
+        'hero-animation-components.animation-type6',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

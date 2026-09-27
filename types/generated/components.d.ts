@@ -364,6 +364,58 @@ export interface HeroAnimationComponentsAnimationType4
   };
 }
 
+export interface HeroAnimationComponentsAnimationType5
+  extends Struct.ComponentSchema {
+  collectionName: 'components_hero_animation_components_animation_type5s';
+  info: {
+    displayName: 'AnimationType5';
+  };
+  attributes: {
+    dialerGrid: Schema.Attribute.Component<
+      'hero-animation-components.dialer-grid',
+      true
+    >;
+    heading: Schema.Attribute.String;
+    number: Schema.Attribute.Integer;
+    subText: Schema.Attribute.String;
+    svg: Schema.Attribute.Text;
+  };
+}
+
+export interface HeroAnimationComponentsAnimationType6
+  extends Struct.ComponentSchema {
+  collectionName: 'components_hero_animation_components_animation_type6s';
+  info: {
+    displayName: 'AnimationType6';
+  };
+  attributes: {
+    bottomText1: Schema.Attribute.String;
+    bottomText2: Schema.Attribute.String;
+    OrbitalItems: Schema.Attribute.Component<
+      'hero-animation-components.orbital-items',
+      true
+    > &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 6;
+        },
+        number
+      >;
+    OuterItems: Schema.Attribute.Component<
+      'hero-animation-components.orbital-items',
+      true
+    > &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 4;
+        },
+        number
+      >;
+    subHeading: Schema.Attribute.String;
+    svg: Schema.Attribute.Text;
+  };
+}
+
 export interface HeroAnimationComponentsBottomItems
   extends Struct.ComponentSchema {
   collectionName: 'components_hero_animation_components_bottom_items';
@@ -373,6 +425,18 @@ export interface HeroAnimationComponentsBottomItems
   attributes: {
     name: Schema.Attribute.String;
     value: Schema.Attribute.String;
+  };
+}
+
+export interface HeroAnimationComponentsDialerGrid
+  extends Struct.ComponentSchema {
+  collectionName: 'components_hero_animation_components_dialer_grids';
+  info: {
+    displayName: 'Dialer Grid';
+  };
+  attributes: {
+    number: Schema.Attribute.String;
+    text: Schema.Attribute.String;
   };
 }
 
@@ -760,7 +824,10 @@ declare module '@strapi/strapi' {
       'hero-animation-components.animation-type2': HeroAnimationComponentsAnimationType2;
       'hero-animation-components.animation-type3': HeroAnimationComponentsAnimationType3;
       'hero-animation-components.animation-type4': HeroAnimationComponentsAnimationType4;
+      'hero-animation-components.animation-type5': HeroAnimationComponentsAnimationType5;
+      'hero-animation-components.animation-type6': HeroAnimationComponentsAnimationType6;
       'hero-animation-components.bottom-items': HeroAnimationComponentsBottomItems;
+      'hero-animation-components.dialer-grid': HeroAnimationComponentsDialerGrid;
       'hero-animation-components.network-data': HeroAnimationComponentsNetworkData;
       'hero-animation-components.orbital-items': HeroAnimationComponentsOrbitalItems;
       'hero-animation-components.routes': HeroAnimationComponentsRoutes;

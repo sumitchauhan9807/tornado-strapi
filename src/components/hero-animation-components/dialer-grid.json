@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_hero_animation_components_dialer_grids",
+  "info": {
+    "displayName": "Dialer Grid"
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

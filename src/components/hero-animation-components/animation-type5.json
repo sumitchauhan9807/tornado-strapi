@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_hero_animation_components_animation_type5s",
+  "info": {
+    "displayName": "AnimationType5"
+  },
+  "options": {},
+  "attributes": {
+    "subText": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "svg": {
+      "type": "text"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "dialerGrid": {
+      "type": "component",
+      "component": "hero-animation-components.dialer-grid",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
