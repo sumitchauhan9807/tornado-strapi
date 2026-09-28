@@ -11,6 +11,10 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "username": {
+      "type": "uid",
+      "required": true
+    },
     "name": {
       "type": "string"
     },
