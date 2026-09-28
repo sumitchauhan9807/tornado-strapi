@@ -830,6 +830,7 @@ export interface ApiTimezoneTimezone extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    accountId: Schema.Attribute.UID & Schema.Attribute.Required;
     clientNumber: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -854,7 +855,6 @@ export interface ApiTimezoneTimezone extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    username: Schema.Attribute.UID & Schema.Attribute.Required;
   };
 }
 
