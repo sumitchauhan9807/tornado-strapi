@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_hero_animation_components_animation_type8s",
+  "info": {
+    "displayName": "AnimationType8"
+  },
+  "options": {},
+  "attributes": {
+    "heading1": {
+      "type": "string"
+    },
+    "heading2": {
+      "type": "string"
+    },
+    "statsValues": {
+      "type": "component",
+      "component": "hero-animation-components.staus-values",
+      "repeatable": true,
+      "max": 3
+    },
+    "OrbitalItems": {
+      "type": "component",
+      "component": "hero-animation-components.orbital-items",
+      "repeatable": true,
+      "max": 4
+    }
+  },
+  "config": {}
+}
