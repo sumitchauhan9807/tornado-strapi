@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industries",
+  "info": {
+    "singularName": "industrie",
+    "pluralName": "industries",
+    "displayName": "Industries"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "hero.hero1",
+        "common.services-lists-1",
+        "common.description-lists-basic",
+        "common.faq",
+        "common.contact-form",
+        "common.counter-up"
+      ]
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
